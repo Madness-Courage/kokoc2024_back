@@ -13,7 +13,7 @@ app.use('/api/admin', adminRoutes);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-const NS_PORT = process.env.PORT || 3001;
-app.listen(NS_PORT, () => {
-    console.log(`Server is running on port ${NS_PORT}`);
+const AD_PORT = process.env.PORT || 3001;
+app.listen(AD_PORT, () => {
+    console.log(`Server is running on port ${AD_PORT}`);
 });

@@ -28,6 +28,22 @@ services:
       NS_DB_NAME: ${NS_DB_NAME}
       NS_DB_PASS: ${NS_DB_PASS}
       JWT_SECRET: ${JWT_SECRET}
-      NS_PORT: ${NS_PORT}
+      AD_PORT: ${AD_PORT}
     ports:
       - "3001:3001"
+  news-service:
+    build:
+      context: ./news-service
+    environment:
+      US_DB_USER: ${US_DB_USER}
+      US_DB_HOST: ${US_DB_HOST}
+      US_DB_NAME: ${US_DB_NAME}
+      US_DB_PASS: ${US_DB_PASS}
+      NS_DB_USER: ${NS_DB_USER}
+      NS_DB_HOST: ${NS_DB_HOST}
+      NS_DB_NAME: ${NS_DB_NAME}
+      NS_DB_PASS: ${NS_DB_PASS}
+      JWT_SECRET: ${JWT_SECRET}
+      NS_PORT: ${NS_PORT}
+    ports:
+      - "3002:3002"
