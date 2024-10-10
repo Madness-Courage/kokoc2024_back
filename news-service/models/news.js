@@ -1,4 +1,4 @@
-const { newsPool } = require('../config/db');
+const newsPool = require('../config/db');
 
 class News {
     static async getNews(limit) {

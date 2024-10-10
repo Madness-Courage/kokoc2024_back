@@ -1,4 +1,4 @@
-const {teamPool} = require('../config/db');
+const teamPool = require('../config/db');
 
 class Player {
     static async getAllPlayers() {

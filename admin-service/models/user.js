@@ -1,4 +1,4 @@
-const { usersPool } = require('../config/db');
+const usersPool = require('../config/db');
 
 class User {
     static async makeAdmin(username) {

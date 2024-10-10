@@ -1,4 +1,4 @@
-const {newsPool} = require('../config/db');
+const newsPool = require('../config/db');
 
 class Comment {
     static async deleteComment(id, author) {
