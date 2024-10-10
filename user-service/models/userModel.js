@@ -1,4 +1,4 @@
-const pool = require('../config/db');
+const {userPool} = require('../config/db');
 
 class UserModel {
     static async createUser(user) {
@@ -9,21 +9,21 @@ class UserModel {
             RETURNING *
         `;
         const values = [photo, full_name, username, password_hash, email, phone];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
     static async getUserByUsername(username) {
         const query = 'SELECT * FROM users WHERE username = $1';
         const values = [username];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
     static async getUserByEmail(email) {
         const query = 'SELECT * FROM users WHERE email = $1';
         const values = [email];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
@@ -41,7 +41,7 @@ class UserModel {
             RETURNING *
         `;
         const values = [photo, full_name, username, password_hash, email, phone, id];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
@@ -55,7 +55,7 @@ class UserModel {
             RETURNING *
         `;
         const values = [reset_code, reset_code_expires, email];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
@@ -67,14 +67,14 @@ class UserModel {
               AND reset_code_expires > NOW()
         `;
         const values = [reset_code];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 
     static async getUserById(id) {
         const query = 'SELECT * FROM users WHERE id = $1';
         const values = [id];
-        const result = await pool.query(query, values);
+        const result = await userPool.query(query, values);
         return result.rows[0];
     }
 }

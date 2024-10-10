@@ -2,14 +2,8 @@ const User = require('../models/user');
 
 exports.makeAdmin = async (req, res) => {
     const {username} = req.body;
-    const currentUser = req.user.username;
 
     try {
-        const isCurrentUserAdmin = await User.isAdmin(currentUser);
-        if (!isCurrentUserAdmin) {
-            return res.status(403).json({error: 'You do not have permission to perform this action'});
-        }
-
         const user = await User.findByUsername(username);
         if (!user) {
             return res.status(404).json({error: 'User not found'});
@@ -24,14 +18,8 @@ exports.makeAdmin = async (req, res) => {
 
 exports.makeNotAdmin = async (req, res) => {
     const {username} = req.body;
-    const currentUser = req.user.username;
 
     try {
-        const isCurrentUserAdmin = await User.isAdmin(currentUser);
-        if (!isCurrentUserAdmin) {
-            return res.status(403).json({error: 'You do not have permission to perform this action'});
-        }
-
         const user = await User.findByUsername(username);
         if (!user) {
             return res.status(404).json({error: 'User not found'});

@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const adminRoutes = require('./routes/adminRoutes');
 const swaggerUi = require('swagger-ui-express');
 const swaggerDocument = require('./swagger.json');
-const jwt = require("jsonwebtoken");
+require("jsonwebtoken");
 require('dotenv').config();
 
 const app = express();
