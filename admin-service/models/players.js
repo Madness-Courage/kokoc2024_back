@@ -12,10 +12,10 @@ class Player {
     }
 
     static async createPlayer(player) {
-        const {photo, full_name, date_of_birth, biography} = player;
+        const {photo, full_name, date_of_birth, biography, position} = player;
         const result = await teamPool.query(
-            'INSERT INTO players (photo, full_name, date_of_birth, biography) VALUES ($1, $2, $3, $4) RETURNING *',
-            [photo, full_name, date_of_birth, biography]
+            'INSERT INTO players (photo, full_name, date_of_birth, biography, position) VALUES ($1, $2, $3, $4, $5) RETURNING *',
+            [photo, full_name, date_of_birth, biography, position]
         );
         return result.rows;
     }
