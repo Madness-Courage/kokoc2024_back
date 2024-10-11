@@ -5,6 +5,7 @@ const newsController = require('../controllers/newsController');
 const playerController = require('../controllers/playerController');
 const coachController = require('../controllers/coachController');
 const staffController = require('../controllers/staffController');
+const matchController = require('../controllers/matchController');
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require("../middleware/adminMiddleware");
 
@@ -32,5 +33,10 @@ router.get('/staff/:id', authMiddleware, adminMiddleware, staffController.getSta
 router.post('/staff', authMiddleware, adminMiddleware, staffController.createStaff);
 router.put('/staff/:id', authMiddleware, adminMiddleware, staffController.updateStaff);
 router.delete('/staff/:id', authMiddleware, adminMiddleware, staffController.deleteStaff);
+
+router.post('/matches', authMiddleware, adminMiddleware, matchController.createMatch);
+router.put('/matches/:id', authMiddleware, adminMiddleware, matchController.updateMatch);
+router.delete('/matches/:id', authMiddleware, adminMiddleware, matchController.deleteMatch);
+router.get('/matches', authMiddleware, adminMiddleware, matchController.getAllMatches);
 
 module.exports = router;

@@ -31,6 +31,10 @@ services:
       TM_DB_HOST: ${NS_DB_HOST}
       TM_DB_NAME: ${NS_DB_NAME}
       TM_DB_PASS: ${NS_DB_PASS}
+      MS_DB_USER: ${MS_DB_USER}
+      MS_DB_HOST: ${MS_DB_HOST}
+      MS_DB_NAME: ${MS_DB_NAME}
+      MS_DB_PASS: ${MS_DB_PASS}
       JWT_SECRET: ${JWT_SECRET}
       AD_PORT: ${AD_PORT}
     ports:
@@ -62,3 +66,14 @@ services:
       TM_PORT: ${TM_PORT}
     ports:
       - "3003:3003"
+  matches-service:
+    build:
+      context: ./matches-service
+    environment:
+      MS_DB_USER: ${MS_DB_USER}
+      MS_DB_HOST: ${MS_DB_HOST}
+      MS_DB_NAME: ${MS_DB_NAME}
+      MS_DB_PASS: ${MS_DB_PASS}
+      MS_PORT: ${MS_PORT}
+    ports:
+      - "3004:3004"

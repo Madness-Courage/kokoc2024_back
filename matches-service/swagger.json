@@ -1,0 +1,25 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Matches Service API",
+    "version": "1.0.0",
+    "description": "API documentation for Matches Service"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3004/api"
+    }
+  ],
+  "paths": {
+    "/matches": {
+      "get": {
+        "summary": "Get all matches",
+        "responses": {
+          "200": {
+            "description": "A list of matches"
+          }
+        }
+      }
+    }
+  }
+}

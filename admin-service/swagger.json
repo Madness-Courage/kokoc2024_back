@@ -14,7 +14,9 @@
     "/users/make-admin": {
       "put": {
         "summary": "Make a user an admin",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -82,7 +84,9 @@
     "/users/make-not-admin": {
       "put": {
         "summary": "Make a user not an admin",
-        "tags": ["Users"],
+        "tags": [
+          "Users"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -150,7 +154,9 @@
     "/news": {
       "get": {
         "summary": "Get all news",
-        "tags": ["News"],
+        "tags": [
+          "News"
+        ],
         "responses": {
           "200": {
             "description": "List of news items",
@@ -210,7 +216,9 @@
     "/news/add-news": {
       "post": {
         "summary": "Add a news item",
-        "tags": ["News"],
+        "tags": [
+          "News"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -275,7 +283,9 @@
     "/news/delete-news/{id}": {
       "delete": {
         "summary": "Delete a news item",
-        "tags": ["News"],
+        "tags": [
+          "News"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -338,7 +348,9 @@
     "/players": {
       "get": {
         "summary": "Get all players",
-        "tags": ["Players"],
+        "tags": [
+          "Players"
+        ],
         "responses": {
           "200": {
             "description": "List of players",
@@ -392,7 +404,9 @@
     "/players/{id}": {
       "get": {
         "summary": "Get a player by ID",
-        "tags": ["Players"],
+        "tags": [
+          "Players"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -466,7 +480,9 @@
       },
       "post": {
         "summary": "Create a new player",
-        "tags": ["Players"],
+        "tags": [
+          "Players"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -540,7 +556,9 @@
       },
       "put": {
         "summary": "Update a player",
-        "tags": ["Players"],
+        "tags": [
+          "Players"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -639,7 +657,9 @@
       },
       "delete": {
         "summary": "Delete a player",
-        "tags": ["Players"],
+        "tags": [
+          "Players"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -687,7 +707,9 @@
     "/coaches": {
       "get": {
         "summary": "Get all coaches",
-        "tags": ["Coaches"],
+        "tags": [
+          "Coaches"
+        ],
         "responses": {
           "200": {
             "description": "List of coaches",
@@ -737,7 +759,9 @@
     "/coaches/{id}": {
       "get": {
         "summary": "Get a coach by ID",
-        "tags": ["Coaches"],
+        "tags": [
+          "Coaches"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -807,7 +831,9 @@
       },
       "post": {
         "summary": "Create a new coach",
-        "tags": ["Coaches"],
+        "tags": [
+          "Coaches"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -873,7 +899,9 @@
       },
       "put": {
         "summary": "Update a coach",
-        "tags": ["Coaches"],
+        "tags": [
+          "Coaches"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -964,7 +992,9 @@
       },
       "delete": {
         "summary": "Delete a coach",
-        "tags": ["Coaches"],
+        "tags": [
+          "Coaches"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1012,7 +1042,9 @@
     "/staff": {
       "get": {
         "summary": "Get all staff",
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "responses": {
           "200": {
             "description": "List of staff",
@@ -1062,7 +1094,9 @@
     "/staff/{id}": {
       "get": {
         "summary": "Get a staff member by ID",
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1132,7 +1166,9 @@
       },
       "post": {
         "summary": "Create a new staff member",
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -1198,7 +1234,9 @@
       },
       "put": {
         "summary": "Update a staff member",
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1289,7 +1327,9 @@
       },
       "delete": {
         "summary": "Delete a staff member",
-        "tags": ["Staff"],
+        "tags": [
+          "Staff"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -1330,6 +1370,150 @@
                 }
               }
             }
+          }
+        }
+      }
+    },
+    "/matches": {
+      "post": {
+        "summary": "Create a new match",
+        "tags": ["Matches"],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "team1": {
+                    "type": "string"
+                  },
+                  "team1_logo_url": {
+                    "type": "string"
+                  },
+                  "team2": {
+                    "type": "string"
+                  },
+                  "team2_logo_url": {
+                    "type": "string"
+                  },
+                  "team1_goals": {
+                    "type": "integer"
+                  },
+                  "team2_goals": {
+                    "type": "integer"
+                  },
+                  "stadium": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "stream_url": {
+                    "type": "string"
+                  },
+                  "registration_form_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "Match created successfully"
+          }
+        }
+      },
+      "get": {
+        "summary": "Get all matches",
+        "tags": ["Matches"],
+        "responses": {
+          "200": {
+            "description": "A list of matches"
+          }
+        }
+      }
+    },
+    "/matches/{id}": {
+      "put": {
+        "summary": "Update an existing match",
+        "tags": ["Matches"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "team1": {
+                    "type": "string"
+                  },
+                  "team1_logo_url": {
+                    "type": "string"
+                  },
+                  "team2": {
+                    "type": "string"
+                  },
+                  "team2_logo_url": {
+                    "type": "string"
+                  },
+                  "team1_goals": {
+                    "type": "integer"
+                  },
+                  "team2_goals": {
+                    "type": "integer"
+                  },
+                  "stadium": {
+                    "type": "string"
+                  },
+                  "start_time": {
+                    "type": "string"
+                  },
+                  "stream_url": {
+                    "type": "string"
+                  },
+                  "registration_form_url": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Match updated successfully"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Delete a match",
+        "tags": ["Matches"],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Match deleted successfully"
           }
         }
       }
