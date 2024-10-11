@@ -14,6 +14,7 @@
     "/users/make-admin": {
       "put": {
         "summary": "Make a user an admin",
+        "tags": ["Users"],
         "requestBody": {
           "required": true,
           "content": {
@@ -81,6 +82,7 @@
     "/users/make-not-admin": {
       "put": {
         "summary": "Make a user not an admin",
+        "tags": ["Users"],
         "requestBody": {
           "required": true,
           "content": {
@@ -148,6 +150,7 @@
     "/news": {
       "get": {
         "summary": "Get all news",
+        "tags": ["News"],
         "responses": {
           "200": {
             "description": "List of news items",
@@ -207,6 +210,7 @@
     "/news/add-news": {
       "post": {
         "summary": "Add a news item",
+        "tags": ["News"],
         "requestBody": {
           "required": true,
           "content": {
@@ -271,6 +275,7 @@
     "/news/delete-news/{id}": {
       "delete": {
         "summary": "Delete a news item",
+        "tags": ["News"],
         "parameters": [
           {
             "name": "id",
@@ -333,6 +338,7 @@
     "/players": {
       "get": {
         "summary": "Get all players",
+        "tags": ["Players"],
         "responses": {
           "200": {
             "description": "List of players",
@@ -386,6 +392,7 @@
     "/players/{id}": {
       "get": {
         "summary": "Get a player by ID",
+        "tags": ["Players"],
         "parameters": [
           {
             "name": "id",
@@ -459,6 +466,7 @@
       },
       "post": {
         "summary": "Create a new player",
+        "tags": ["Players"],
         "requestBody": {
           "required": true,
           "content": {
@@ -532,6 +540,7 @@
       },
       "put": {
         "summary": "Update a player",
+        "tags": ["Players"],
         "parameters": [
           {
             "name": "id",
@@ -630,6 +639,7 @@
       },
       "delete": {
         "summary": "Delete a player",
+        "tags": ["Players"],
         "parameters": [
           {
             "name": "id",
@@ -677,6 +687,7 @@
     "/coaches": {
       "get": {
         "summary": "Get all coaches",
+        "tags": ["Coaches"],
         "responses": {
           "200": {
             "description": "List of coaches",
@@ -726,6 +737,7 @@
     "/coaches/{id}": {
       "get": {
         "summary": "Get a coach by ID",
+        "tags": ["Coaches"],
         "parameters": [
           {
             "name": "id",
@@ -795,6 +807,7 @@
       },
       "post": {
         "summary": "Create a new coach",
+        "tags": ["Coaches"],
         "requestBody": {
           "required": true,
           "content": {
@@ -860,6 +873,7 @@
       },
       "put": {
         "summary": "Update a coach",
+        "tags": ["Coaches"],
         "parameters": [
           {
             "name": "id",
@@ -950,6 +964,7 @@
       },
       "delete": {
         "summary": "Delete a coach",
+        "tags": ["Coaches"],
         "parameters": [
           {
             "name": "id",
@@ -997,6 +1012,7 @@
     "/staff": {
       "get": {
         "summary": "Get all staff",
+        "tags": ["Staff"],
         "responses": {
           "200": {
             "description": "List of staff",
@@ -1046,6 +1062,7 @@
     "/staff/{id}": {
       "get": {
         "summary": "Get a staff member by ID",
+        "tags": ["Staff"],
         "parameters": [
           {
             "name": "id",
@@ -1115,6 +1132,7 @@
       },
       "post": {
         "summary": "Create a new staff member",
+        "tags": ["Staff"],
         "requestBody": {
           "required": true,
           "content": {
@@ -1180,6 +1198,7 @@
       },
       "put": {
         "summary": "Update a staff member",
+        "tags": ["Staff"],
         "parameters": [
           {
             "name": "id",
@@ -1270,6 +1289,7 @@
       },
       "delete": {
         "summary": "Delete a staff member",
+        "tags": ["Staff"],
         "parameters": [
           {
             "name": "id",

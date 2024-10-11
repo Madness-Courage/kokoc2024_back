@@ -55,10 +55,10 @@ services:
     build:
       context: ./team-service
     environment:
-      TM_DB_USER: ${NS_DB_USER}
-      TM_DB_HOST: ${NS_DB_HOST}
-      TM_DB_NAME: ${NS_DB_NAME}
-      TM_DB_PASS: ${NS_DB_PASS}
-      TM_PORT: ${NS_PORT}
+      TM_DB_USER: ${TM_DB_USER}
+      TM_DB_HOST: ${TM_DB_HOST}
+      TM_DB_NAME: ${TM_DB_NAME}
+      TM_DB_PASS: ${TM_DB_PASS}
+      TM_PORT: ${TM_PORT}
     ports:
       - "3003:3003"
