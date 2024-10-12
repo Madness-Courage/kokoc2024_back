@@ -1377,7 +1377,9 @@
     "/matches": {
       "post": {
         "summary": "Create a new match",
-        "tags": ["Matches"],
+        "tags": [
+          "Matches"
+        ],
         "requestBody": {
           "required": true,
           "content": {
@@ -1428,10 +1430,54 @@
       },
       "get": {
         "summary": "Get all matches",
-        "tags": ["Matches"],
+        "tags": [
+          "Matches"
+        ],
         "responses": {
           "200": {
-            "description": "A list of matches"
+            "description": "A list of matches",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "team1": {
+                        "type": "string"
+                      },
+                      "team1_logo_url": {
+                        "type": "string"
+                      },
+                      "team2": {
+                        "type": "string"
+                      },
+                      "team2_logo_url": {
+                        "type": "string"
+                      },
+                      "team1_goals": {
+                        "type": "integer"
+                      },
+                      "team2_goals": {
+                        "type": "integer"
+                      },
+                      "stadium": {
+                        "type": "string"
+                      },
+                      "start_time": {
+                        "type": "string"
+                      },
+                      "stream_url": {
+                        "type": "string"
+                      },
+                      "registration_form_url": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
@@ -1439,7 +1485,9 @@
     "/matches/{id}": {
       "put": {
         "summary": "Update an existing match",
-        "tags": ["Matches"],
+        "tags": [
+          "Matches"
+        ],
         "parameters": [
           {
             "in": "path",
@@ -1500,7 +1548,9 @@
       },
       "delete": {
         "summary": "Delete a match",
-        "tags": ["Matches"],
+        "tags": [
+          "Matches"
+        ],
         "parameters": [
           {
             "in": "path",
