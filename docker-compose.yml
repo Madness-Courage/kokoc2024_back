@@ -77,3 +77,14 @@ services:
       MS_PORT: ${MS_PORT}
     ports:
       - "3004:3004"
+  store-service:
+    build:
+      context: ./store-service
+    environment:
+      SR_DB_USER: ${SR_DB_USER}
+      SR_DB_HOST: ${SR_DB_HOST}
+      SR_DB_NAME: ${SR_DB_NAME}
+      SR_DB_PASS: ${SR_DB_PASS}
+      SR_PORT: ${SR_PORT}
+    ports:
+      - "3005:3005"

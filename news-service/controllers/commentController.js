@@ -21,7 +21,7 @@ exports.deleteComment = async (req, res) => {
 };
 
 exports.getComment = async (req, res) => {
-    const {news_id} = req.body;
+    const {news_id} = req.query;
     const comment = await Comment.getComment(news_id);
     res.status(200).json(comment);
 };

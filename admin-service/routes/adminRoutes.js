@@ -6,6 +6,8 @@ const playerController = require('../controllers/playerController');
 const coachController = require('../controllers/coachController');
 const staffController = require('../controllers/staffController');
 const matchController = require('../controllers/matchController');
+const productController = require('../controllers/productController');
+
 const authMiddleware = require('../middleware/authMiddleware');
 const adminMiddleware = require("../middleware/adminMiddleware");
 
@@ -38,5 +40,10 @@ router.post('/matches', authMiddleware, adminMiddleware, matchController.createM
 router.put('/matches/:id', authMiddleware, adminMiddleware, matchController.updateMatch);
 router.delete('/matches/:id', authMiddleware, adminMiddleware, matchController.deleteMatch);
 router.get('/matches', authMiddleware, adminMiddleware, matchController.getAllMatches);
+
+router.post('/products', authMiddleware, adminMiddleware, productController.createProduct);
+router.put('/products/:id', authMiddleware, adminMiddleware, productController.updateProduct);
+router.delete('/products/:id', authMiddleware, adminMiddleware, productController.deleteProduct);
+router.get('/products', authMiddleware, adminMiddleware, productController.getProducts);
 
 module.exports = router;
