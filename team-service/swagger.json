@@ -38,6 +38,12 @@
           },
           "biography": {
             "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
           }
         }
       },
@@ -55,6 +61,12 @@
             "type": "string"
           },
           "biography": {
+            "type": "string"
+          },
+          "position": {
+            "type": "string"
+          },
+          "number": {
             "type": "string"
           }
         }

@@ -390,6 +390,12 @@
                       },
                       "biography": {
                         "type": "string"
+                      },
+                      "position": {
+                        "type": "string"
+                      },
+                      "number": {
+                        "type": "string"
                       }
                     }
                   }
@@ -454,6 +460,12 @@
                     },
                     "biography": {
                       "type": "string"
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "number": {
+                      "type": "string"
                     }
                   }
                 }
@@ -516,6 +528,12 @@
                   },
                   "biography": {
                     "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "string"
                   }
                 }
               }
@@ -544,6 +562,12 @@
                       "format": "date"
                     },
                     "biography": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "number": {
                       "type": "string"
                     }
                   }
@@ -602,6 +626,12 @@
                   },
                   "biography": {
                     "type": "string"
+                  },
+                  "position": {
+                    "type": "string"
+                  },
+                  "number": {
+                    "type": "string"
                   }
                 }
               }
@@ -630,6 +660,12 @@
                       "format": "date"
                     },
                     "biography": {
+                      "type": "string"
+                    },
+                    "position": {
+                      "type": "string"
+                    },
+                    "number": {
                       "type": "string"
                     }
                   }
