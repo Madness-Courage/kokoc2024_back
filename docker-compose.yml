@@ -4,6 +4,7 @@ services:
   user-service:
     build:
       context: ./user-service
+    restart: on-failure
     environment:
       US_DB_USER: ${US_DB_USER}
       US_DB_HOST: ${US_DB_HOST}
@@ -15,9 +16,11 @@ services:
       US_PORT: ${US_PORT}
     ports:
       - "3000:3000"
+
   admin-service:
     build:
       context: ./admin-service
+    restart: on-failure
     environment:
       US_DB_USER: ${US_DB_USER}
       US_DB_HOST: ${US_DB_HOST}
@@ -39,9 +42,11 @@ services:
       AD_PORT: ${AD_PORT}
     ports:
       - "3001:3001"
+
   news-service:
     build:
       context: ./news-service
+    restart: on-failure
     environment:
       US_DB_USER: ${US_DB_USER}
       US_DB_HOST: ${US_DB_HOST}
@@ -55,9 +60,11 @@ services:
       NS_PORT: ${NS_PORT}
     ports:
       - "3002:3002"
+
   team-service:
     build:
       context: ./team-service
+    restart: on-failure
     environment:
       TM_DB_USER: ${TM_DB_USER}
       TM_DB_HOST: ${TM_DB_HOST}
@@ -66,9 +73,11 @@ services:
       TM_PORT: ${TM_PORT}
     ports:
       - "3003:3003"
+
   matches-service:
     build:
       context: ./matches-service
+    restart: on-failure
     environment:
       MS_DB_USER: ${MS_DB_USER}
       MS_DB_HOST: ${MS_DB_HOST}
@@ -77,9 +86,11 @@ services:
       MS_PORT: ${MS_PORT}
     ports:
       - "3004:3004"
+
   store-service:
     build:
       context: ./store-service
+    restart: on-failure
     environment:
       SR_DB_USER: ${SR_DB_USER}
       SR_DB_HOST: ${SR_DB_HOST}
