@@ -10,6 +10,20 @@
       "url": "http://localhost:3001/api/admin"
     }
   ],
+  "components": {
+    "securitySchemes": {
+      "Bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "security": [
+    {
+      "Bearer": []
+    }
+  ],
   "paths": {
     "/users/make-admin": {
       "put": {

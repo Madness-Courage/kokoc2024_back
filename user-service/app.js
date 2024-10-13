@@ -12,7 +12,7 @@ app.use('/api/users', userRoutes);
 
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
-const US_PORT = process.env.PORT || 3000;
+const US_PORT = process.env.US_PORT || 3000;
 app.listen(US_PORT, () => {
     console.log(`Server is running on port ${US_PORT}`);
 });
