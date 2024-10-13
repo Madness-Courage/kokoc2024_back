@@ -11,4 +11,4 @@ const matchesPool = new Pool({
     }
 });
 
-module.exports = matchesPool;
+module.exports = {matchesPool};

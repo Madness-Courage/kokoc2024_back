@@ -11,4 +11,4 @@ const teamPool = new Pool({
     }
 });
 
-module.exports = teamPool;
+module.exports = {teamPool};

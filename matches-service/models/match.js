@@ -1,8 +1,8 @@
-const pool = require('../config/db');
+const {matchesPool} = require('../config/db');
 
 class Match {
     static async getAll() {
-        const result = await pool.query('SELECT * FROM matches');
+        const result = await matchesPool.query('SELECT * FROM matches');
         return result.rows;
     }
 }

@@ -11,4 +11,4 @@ const storePool = new Pool({
     }
 });
 
-module.exports = storePool;
+module.exports = {storePool};
