@@ -1416,6 +1416,9 @@
                   },
                   "registration_form_url": {
                     "type": "string"
+                  },
+                  "is_active": {
+                    "type": "boolean"
                   }
                 }
               }
