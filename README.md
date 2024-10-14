@@ -24,8 +24,8 @@
 
 1. Клонировать репозиторий:
    ```sh
-   git clone https://github.com/ваш-репозиторий.git
-   cd ваш-репозиторий
+   git clone https://github.com/Madness-Courage/kokoc2024_back
+   cd kokoc2024_back
 2. Запустить проект с помощью команды:
     ```sh
    docker-compose up
