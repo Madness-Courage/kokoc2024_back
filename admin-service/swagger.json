@@ -1701,8 +1701,7 @@
                         "type": "string"
                       },
                       "image": {
-                        "type": "string",
-                        "format": "byte"
+                        "type": "string"
                       },
                       "created_at": {
                         "type": "string",
@@ -1761,8 +1760,7 @@
                     "type": "string"
                   },
                   "image": {
-                    "type": "string",
-                    "format": "byte"
+                    "type": "string"
                   }
                 }
               }

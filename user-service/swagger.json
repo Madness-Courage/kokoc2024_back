@@ -34,7 +34,7 @@
                 "type": "object",
                 "properties": {
                   "photo": {
-                    "type": "object"
+                    "type": "string"
                   },
                   "full_name": {
                     "type": "string"
@@ -231,7 +231,7 @@
                       "type": "integer"
                     },
                     "photo": {
-                      "type": "object"
+                      "type": "string"
                     },
                     "full_name": {
                       "type": "string"
@@ -279,7 +279,7 @@
                 "type": "object",
                 "properties": {
                   "photo": {
-                    "type": "object"
+                    "type": "string"
                   },
                   "full_name": {
                     "type": "string"

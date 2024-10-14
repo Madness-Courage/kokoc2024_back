@@ -51,8 +51,7 @@
                         "type": "integer"
                       },
                       "photo": {
-                        "type": "string",
-                        "format": "byte"
+                        "type": "string"
                       },
                       "title": {
                         "type": "string"

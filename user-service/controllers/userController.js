@@ -7,8 +7,7 @@ const {v4: uuidv4} = require('uuid');
 class UserController {
     static async register(req, res) {
         try {
-            const {full_name, username, password, email, phone} = req.body;
-            const photo = req.file ? req.file.buffer : null;
+            const {photo, full_name, username, password, email, phone} = req.body;
             const password_hash = await bcrypt.hash(password, 10);
             const user = await UserModel.createUser({photo, full_name, username, password_hash, email, phone});
             res.status(201).json(user);
@@ -90,8 +89,7 @@ class UserController {
     static async updateProfile(req, res) {
         try {
             const {id} = req.user;
-            const {full_name, username, password, email, phone} = req.body;
-            const photo = req.file ? req.file.buffer : null;
+            const {photo, full_name, username, password, email, phone} = req.body;
             const password_hash = password ? await bcrypt.hash(password, 10) : undefined;
             const user = await UserModel.updateUser(id, {photo, full_name, username, password_hash, email, phone});
             res.json(user);
