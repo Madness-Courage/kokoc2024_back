@@ -1,9 +1,9 @@
 const News = require('../models/news');
 
 exports.addNews = async (req, res) => {
-    const {photo, title, text, author} = req.body;
+    const {photo, title, text, author, is_important} = req.body;
     try {
-        await News.create(photo, title, text, author);
+        await News.create(photo, title, text, author, is_important);
         res.json({message: 'News item created'});
     } catch (error) {
         res.status(500).json({error: error.message});
